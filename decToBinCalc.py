@@ -10,7 +10,7 @@ import math
 # to cover all possible combinations
 #========= Binary ==========#
 def bin_to_dec(binary):
-    decimal, i, n = 0, 0, 0
+    decimal, i = 0, 0
     while(binary != 0):
         dec = binary % 10
         decimal = decimal + dec * pow(2, i)
