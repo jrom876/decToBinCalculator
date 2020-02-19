@@ -44,9 +44,18 @@ def oct_to_hex(oct):
     return hex(dec)
 
 #========= Decimal ==========#
-def dec_to_bin(x):
-    # return int(bin(x)[2:])
-    return bin(x)
+# def dec_to_bin(x):
+#     # return int(bin(x)[2:])
+#     return bin(x)
+
+def dec_to_bin(decimal):
+    binary, i = 0, 0
+    while(decimal != 0):
+        bin = decimal % 2
+        binary = binary + bin * pow(10, i)
+        decimal = decimal//2
+        i += 1
+    return binary
 
 def dec_to_oct(x):
     # return int(oct(x)[2:])
