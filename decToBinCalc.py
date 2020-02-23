@@ -19,36 +19,10 @@ def bin_to_dec(binary):
     return decimal
 
 ## Binary to octal the easy way
-# def bin_to_oct(binary):
-#     x = bin_to_dec(binary)
-#     result = oct(x)
-#     return result
-
-## Binary to octal the hard way
 def bin_to_oct(binary):
-    octal, i, rem, val = 0, 1, 0, 0
-    while(binary > 0):
-        rem = binary % 1000
-        if rem = 0:
-            val = 0
-        elif rem = 1:
-            val = 1
-        elif rem = 2:
-            val = 2
-        elif rem = 3:
-            val = 3
-        elif rem = 4:
-            val = 4
-        elif rem = 5:
-            val = 5
-        elif rem = 6:
-            val = 6
-        elif rem = 7:
-            val = 7
-    octal = (val * i) + octal
-    binary = binary//1000
-    i *= 10
-    return '0o'+str(octal)
+    x = bin_to_dec(binary)
+    result = oct(x)
+    return result
 
 def bin_to_hex(binary):
     x = bin_to_dec(binary)
