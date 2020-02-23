@@ -18,10 +18,37 @@ def bin_to_dec(binary):
         i += 1
     return decimal
 
+## Binary to octal the easy way
+# def bin_to_oct(binary):
+#     x = bin_to_dec(binary)
+#     result = oct(x)
+#     return result
+
+## Binary to octal the hard way
 def bin_to_oct(binary):
-    x = bin_to_dec(binary)
-    result = oct(x)
-    return result
+    octal, i, rem, val = 0, 1, 0, 0
+    while(binary > 0):
+        rem = binary % 1000
+        if rem = 0:
+            val = 0
+        elif rem = 1:
+            val = 1
+        elif rem = 2:
+            val = 2
+        elif rem = 3:
+            val = 3
+        elif rem = 4:
+            val = 4
+        elif rem = 5:
+            val = 5
+        elif rem = 6:
+            val = 6
+        elif rem = 7:
+            val = 7
+    octal = (val * i) + octal
+    binary = binary//1000
+    i *= 10
+    return '0o'+str(octal)
 
 def bin_to_hex(binary):
     x = bin_to_dec(binary)
@@ -57,14 +84,31 @@ def dec_to_bin(decimal):
         i += 1
     return binary
 
-def dec_to_oct(x):
-    # return int(oct(x)[2:])
-    return oct(x)
+# def dec_to_oct(x):
+#     # return int(oct(x)[2:])
+#     return oct(x)
 
-def dec_to_hex(x):
-    # return int(hex(x)[2:])
-    return hex(x)
+def dec_to_oct(decimal):
+    octal, i = 0, 0
+    while(decimal != 0):
+        oct = decimal % 8
+        octal = octal + oct * pow(10, i)
+        decimal = decimal//8
+        i += 1
+    return '0o'+str(octal)
 
+# def dec_to_hex(x):
+#     # return int(hex(x)[2:])
+#     return hex(x)
+
+def dec_to_hex(decimal):
+    hexadec, i = 0, 0
+    while(decimal != 0):
+        hex = decimal % 16
+        hexadec = hexadec + hex * pow(10, i)
+        decimal = decimal//16
+        i += 1
+    return '0x'+str(hexadec)
 #========= Hexadecimal ==========#
 def hex_to_bin(hex):
     dec = int(hex, 16)
