@@ -18,7 +18,6 @@ def bin_to_dec(binary):
         i += 1
     return decimal
 
-## Binary to octal the easy way
 def bin_to_oct(binary):
     x = bin_to_dec(binary)
     result = oct(x)
