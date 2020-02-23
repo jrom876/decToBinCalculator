@@ -109,6 +109,7 @@ def dec_to_hex(decimal):
         decimal = decimal//16
         i += 1
     return '0x'+str(hexadec)
+
 #========= Hexadecimal ==========#
 def hex_to_bin(hex):
     dec = int(hex, 16)
