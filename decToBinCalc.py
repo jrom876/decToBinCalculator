@@ -70,18 +70,8 @@ def dec_to_oct(decimal):
         i += 1
     return '0o'+str(octal)
 
-# def dec_to_hex(x):
-#     # return int(hex(x)[2:])
-#     return hex(x)
-
-def dec_to_hex(decimal):
-    hexadec, i = 0, 0
-    while(decimal != 0):
-        hex = decimal % 16
-        hexadec = hexadec + hex * pow(10, i)
-        decimal = decimal//16
-        i += 1
-    return '0x'+str(hexadec)
+def dec_to_hex(x):
+    return hex(x)
 
 #========= Hexadecimal ==========#
 def hex_to_bin(hex):
